@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html  
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+	<title>Tuirer</title>
+</h:head>
+<h:body>
+	<h1>Entrar</h1>
+	<h:form>
+		<div>
+			<label>E-Mail</label>
+			<h:inputText value="#{authMb.email}" />
+		</div>
+		<div>
+			<label>Password</label>
+			<h:inputSecret value="#{authMb.password}" />
+		</div>
+		<h:commandLink action="#{authMb.loggin()}" >
+			Entrar
+		</h:commandLink>
+	</h:form>
+</h:body>
+</html>

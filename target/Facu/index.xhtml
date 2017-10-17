@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html  
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+	<title>Tuirer</title>
+</h:head>
+<h:body>
+	<h1>Bienvenido a Tuirer</h1>
+	<h:form>
+		<nav>
+			<h:link value="Entrar" outcome="login" rendered="#{not authMb.logged}" />
+			<h:link value="Registrarse" outcome="register"  rendered="#{not authMb.logged}"/>
+			<h:commandLink value="Salir" action="#{authMb.logout()}"   rendered="#{authMb.logged}"/>
+		</nav>
+	</h:form>
+</h:body>
+</html>

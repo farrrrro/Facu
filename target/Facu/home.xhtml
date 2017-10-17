@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html  
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	>
+<h:head>
+	<title>Tuirer</title>
+</h:head>
+<h:body>
+	<h:form>
+		<nav>
+			<h:link value="Entrar" outcome="login" rendered="#{not authMb.logged}" />
+			<h:link value="Registrarse" outcome="register"  rendered="#{not authMb.logged}"/>
+			<h:commandLink value="Salir" action="#{authMb.logout()}" rendered="#{authMb.logged}"/>
+		</nav>
+	</h:form>
+	<h1>Bienvenido 
+		<h:outputText value="#{authMb.currentUser.username}" />
+	</h1>
+	<h2><h:link value="Ver Todos" rendered="#{postMb.obtainAll}" /></h2>
+	<div>
+		<ui:repeat value="#{postMb.obtainAll()}" var="item"  varStatus="estado">
+		   Usuario: #{item.user.username}
+		   Fecha:   #{item.datetime}
+		   Mensaje: #{item.content}
+		</ui:repeat>
+	</div>
+	<h2><h:link value="Ver Mios" rendered="#{postMb.obtain(currentUser)}" /></h2>
+	<div>
+		<ui:repeat value="#{postMb.obtain(currentUser)}" var="item"  varStatus="estado">
+		   Fecha:   #{item.datetime}
+		   Mensaje: #{item.content}
+		</ui:repeat>
+	</div>
+</h:body>
+</html>

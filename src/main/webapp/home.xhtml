@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html  
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	>
+<h:head>
+	<title>Tuirer</title>
+</h:head>
+<h:body>
+	<h:form>
+		<nav>
+			<h:link value="Entrar" outcome="login" rendered="#{not authMb.logged}" />
+			<h:link value="Registrarse" outcome="register"  rendered="#{not authMb.logged}"/>
+			<h:commandLink value="Salir" action="#{authMb.logout()}" rendered="#{authMb.logged}"/>
+		</nav>
+	</h:form>
+	<h1>Bienvenido 
+		<h:outputText value="#{authMb.currentUser.username}" />
+	</h1>
+	<h2><h:link value="Ver Todos los Mensajes" outcome="vertodo" /></h2>
+	<h2><h:link value="Ver Mis Mensajes" outcome="vermios"/></h2>
+	
+</h:body>
+</html>

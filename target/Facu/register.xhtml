@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html  
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+	<title>Tuirer</title>
+</h:head>
+<h:body>
+	<h1>Registre su usuario</h1>
+	<h:form>
+		<div>
+			<label>E-Mail</label>
+			<h:inputText value="#{registerMb.email}" />
+		</div>
+		<div>
+			<label>Usuario</label>
+			<h:inputText value="#{registerMb.username}" />
+		</div>
+		<div>
+			<label>Password</label>
+			<h:inputSecret value="#{registerMb.password}" />
+		</div>
+		<h:commandLink action="#{registerMb.register()}" >
+			Registrar
+		</h:commandLink>
+	</h:form>
+</h:body>
+</html>
