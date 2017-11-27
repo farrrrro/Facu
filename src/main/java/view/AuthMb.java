@@ -5,6 +5,7 @@ import java.io.Serializable;
 import javax.enterprise.context.SessionScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
+import javax.validation.constraints.NotNull;
 
 import controller.UserController;
 import model.User;
@@ -12,14 +13,17 @@ import model.User;
 @Named
 @SessionScoped
 public class AuthMb implements Serializable {
+	
 	private static final long serialVersionUID = 791515424619865689L;
 
 	@Inject
 	private UserController userCntr;
-
-	private String email;
-	private String password;
+	
+	@NotNull
 	private String username;
+	
+	@NotNull
+	private String password;
 	
 	private User currentUser;
 	
@@ -28,18 +32,17 @@ public class AuthMb implements Serializable {
 	}
 	
 	public String loggin(){
-		currentUser = userCntr.getAuthUser(email, password);
-		email = null;
+		currentUser = userCntr.getAuthUser(username, password);
+		username = null;
 		password = null;
 		if(isLogged())
-			return "home?faces-redirect=true";
+			return "home";
 		else 
-			return null;
+			return "login";
 	}
 	
 	public String logout(){
-		currentUser = null;
-		return "index";
+		return "login?faces-redirect=true";
 	}
 
 	public String getUsername() {
@@ -48,14 +51,6 @@ public class AuthMb implements Serializable {
 
 	public void setUsername(String username) {
 		this.username = username;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
 	}
 
 	public String getPassword() {

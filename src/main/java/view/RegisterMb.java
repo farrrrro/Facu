@@ -1,7 +1,9 @@
 package view;
 
+
 import javax.inject.Inject;
 import javax.inject.Named;
+import javax.validation.constraints.NotNull;
 
 import controller.UserController;
 import model.User;
@@ -11,38 +13,42 @@ public class RegisterMb {
 
 	@Inject
 	private UserController userCntr;
-
-	private String username;
-	private String password;
-	private String email;
 	
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
+	private User user = new User();
+	
+	@NotNull
+	private String confirmPass;
+	
+	
 
 	public String register(){
-		User user = new User(username, password, email);
-		userCntr.register(user);
-		return "index";
+		try {
+			if(!confirmPass.equals(user.getPassword())){
+				return "Contraseñas no coinciden";
+			}
+			userCntr.addUser(user);
+			user = null;
+			return "login?faces-redirect=true";
+		} catch (Exception e) {
+			return "Ha ocurrido un error";
+		}
 	}
 
-	public String getUsername() {
-		return username;
+
+	public User getUser() {
+		return user;
 	}
 
-	public void setUsername(String username) {
-		this.username = username;
+	public void setUser(User user) {
+		this.user = user;
 	}
 
-	public String getPassword() {
-		return password;
+	public String getConfirmPass() {
+		return confirmPass;
 	}
 
-	public void setPassword(String password) {
-		this.password = password;
-	}	
+	public void setConfirmPass(String confirmPass) {
+		this.confirmPass = confirmPass;
+	}
+	
 }
