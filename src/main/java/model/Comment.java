@@ -3,7 +3,6 @@ package model;
 import java.util.Date;
 
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -13,61 +12,67 @@ import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-import model.Image;
-
 @Entity
-public class Post {
-	
+public class Comment {
+
 	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-	private int id;
-	
+    private int id;
+
 	@NotNull
-    @ManyToOne(fetch=FetchType.LAZY)
+	@ManyToOne
 	private User user;
 	
 	@NotNull
-    @Temporal(TemporalType.TIMESTAMP)
-	private Date dateTime;
+	@ManyToOne
+	private Post post;
 	
 	@NotNull
-    @Size(min=2,max=255)
+	@Size(min=2,max=255)
 	private String content;
 	
-    @ManyToOne(fetch=FetchType.EAGER)
-    private Image image;
+	@NotNull
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date date;
 
 	public int getId() {
 		return id;
 	}
+
 	public void setId(int id) {
 		this.id = id;
 	}
+
 	public User getUser() {
 		return user;
 	}
+
 	public void setUser(User user) {
 		this.user = user;
 	}
-	public Date getDateTime() {
-		return dateTime;
+
+	public Post getPost() {
+		return post;
 	}
-	public void setDateTime(Date dateime) {
-		this.dateTime = dateime;
+
+	public void setPost(Post post) {
+		this.post = post;
 	}
+
 	public String getContent() {
 		return content;
 	}
+
 	public void setContent(String content) {
 		this.content = content;
 	}
-	public Image getImage() {
-		return image;
+
+	public Date getDate() {
+		return date;
 	}
 
-	public void setImage(Image image) {
-		this.image = image;
+	public void setDate(Date date) {
+		this.date = date;
 	}
-	
 	
 }
