@@ -1,44 +1,42 @@
 package controller;
 
 import java.util.Date;
-import java.util.ArrayList;
 import java.util.List;
+
 import javax.ejb.Stateless;
-import javax.inject.Inject;
-import db.DataBase;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.TypedQuery;
+
+import model.Image;
 import model.Post;
 import model.User;
 
 @Stateless
 public class PostController {
 
-	@Inject
-	private DataBase db;
+    @PersistenceContext
+    private EntityManager entityManager;
 
-	public void generate(Post post) {
-		Date date = new Date();
-		post.setDateTime(date);
-		post.setId(db.nextPostId());
-		db.posts.add(post);
+    
+	public void generate(User user, String content, Image img) {
+		Post p = new Post();
+		p.setDateTime(new Date());
+		p.setContent(content);
+		p.setUser(user);
+		p.setImage(img);
+		entityManager.persist(p);
 	}
 
 	public List<Post> obtain(User user){
-		List<Post> list = new ArrayList<>();
-		for(Post post : db.posts){
-			if (post.getUser().getUsername().equals(user.getUsername())) 
-			{
-				list.add(post);
-			}
-		}
-		return list;
+		TypedQuery<Post> q = entityManager.createQuery("Select p from Post p where p.user = :user",Post.class);
+		q.setParameter("user",user);
+		return q.getResultList();
 	}
 	
 	public List<Post> obtainAll(){
-		List<Post> list = new ArrayList<>();
-		for(Post post : db.posts){
-			list.add(post);
-		}
-		return list;
+		TypedQuery<Post> q = entityManager.createQuery("Select p from Post p",Post.class);
+		return q.getResultList();
 	}
 
 }
