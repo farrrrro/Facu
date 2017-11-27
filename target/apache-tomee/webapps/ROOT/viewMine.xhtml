@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+	<title>Bienvenido a Tuirer</title>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</h:head>
+<h:body>
+	<h:form>
+		<nav>
+			<h:link value="Entrar" outcome="login" rendered="#{not authMb.logged}" />
+			<h:link value="Registrarse" outcome="register"  rendered="#{not authMb.logged}"/>
+			<h:commandLink value="Salir" action="#{authMb.logout()}" rendered="#{authMb.logged}"/>
+		</nav>
+	</h:form>
+	<h1>Mis Mensajes</h1>
+		<ui:repeat var="post" value="#{postMb.obtain}">
+		<div class="panel panel-default">
+		  <div class="panel-heading">
+		    <h3 class="panel-title">
+		    	<h:outputText value="#{post.user.name}" />
+		    	<small>
+		    		<h:outputText value="#{post.dateTime}">
+						<f:convertDateTime pattern="dd/MM/yyyy HH:mm" />
+		    		</h:outputText>
+		    	</small>
+		    </h3>
+		  </div>
+		  <div class="panel-body">
+		    <h:outputText value="#{post.content}" />
+		  </div>
+		</div>
+	</ui:repeat>
+	<div>
+		<ui:repeat value="#{postMb.obtain(currentUser)}" var="item"  varStatus="estado">
+		   Fecha:   #{item.datetime}
+		   Mensaje: #{item.content}
+		</ui:repeat>
+	</div>
+	
+	<h:link value="Volver" outcome="home"/>
+</h:body>
+</html>

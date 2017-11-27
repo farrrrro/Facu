@@ -1,0 +1,148 @@
+27-Nov-2017 11:24:17.513 INFORMACIÓN [main] sun.reflect.NativeMethodAccessorImpl.invoke Server version:        Apache Tomcat (TomEE)/8.5.20 (7.0.4)
+27-Nov-2017 11:24:17.522 INFORMACIÓN [main] sun.reflect.NativeMethodAccessorImpl.invoke Server built:          Aug 2 2017 21:35:49 UTC
+27-Nov-2017 11:24:17.522 INFORMACIÓN [main] sun.reflect.NativeMethodAccessorImpl.invoke Server number:         8.5.20.0
+27-Nov-2017 11:24:17.522 INFORMACIÓN [main] sun.reflect.NativeMethodAccessorImpl.invoke OS Name:               Windows 7
+27-Nov-2017 11:24:17.522 INFORMACIÓN [main] sun.reflect.NativeMethodAccessorImpl.invoke OS Version:            6.1
+27-Nov-2017 11:24:17.522 INFORMACIÓN [main] sun.reflect.NativeMethodAccessorImpl.invoke Architecture:          amd64
+27-Nov-2017 11:24:17.523 INFORMACIÓN [main] sun.reflect.NativeMethodAccessorImpl.invoke Java Home:             C:\Program Files\Java\jdk1.8.0_65\jre
+27-Nov-2017 11:24:17.523 INFORMACIÓN [main] sun.reflect.NativeMethodAccessorImpl.invoke JVM Version:           1.8.0_65-b17
+27-Nov-2017 11:24:17.523 INFORMACIÓN [main] sun.reflect.NativeMethodAccessorImpl.invoke JVM Vendor:            Oracle Corporation
+27-Nov-2017 11:24:17.523 INFORMACIÓN [main] sun.reflect.NativeMethodAccessorImpl.invoke CATALINA_BASE:         C:\Users\Andres\Desktop\facu3.zip_expanded\facu2\Facu\target\apache-tomee
+27-Nov-2017 11:24:17.523 INFORMACIÓN [main] sun.reflect.NativeMethodAccessorImpl.invoke CATALINA_HOME:         C:\Users\Andres\Desktop\facu3.zip_expanded\facu2\Facu\target\apache-tomee
+27-Nov-2017 11:24:17.523 INFORMACIÓN [main] sun.reflect.NativeMethodAccessorImpl.invoke Command line argument: -XX:+HeapDumpOnOutOfMemoryError
+27-Nov-2017 11:24:17.523 INFORMACIÓN [main] sun.reflect.NativeMethodAccessorImpl.invoke Command line argument: -Dorg.apache.catalina.STRICT_SERVLET_COMPLIANCE=false
+27-Nov-2017 11:24:17.523 INFORMACIÓN [main] sun.reflect.NativeMethodAccessorImpl.invoke Command line argument: -Dopenejb.session.manager=org.apache.tomee.catalina.session.QuickSessionManager
+27-Nov-2017 11:24:17.524 INFORMACIÓN [main] sun.reflect.NativeMethodAccessorImpl.invoke Command line argument: -Dtomee.remote.support=true
+27-Nov-2017 11:24:17.524 INFORMACIÓN [main] sun.reflect.NativeMethodAccessorImpl.invoke Command line argument: -Dtomee.jsp-development=true
+27-Nov-2017 11:24:17.524 INFORMACIÓN [main] sun.reflect.DelegatingMethodAccessorImpl.invoke Command line argument: -Djava.util.logging.config.file=C:\Users\Andres\Desktop\facu3.zip_expanded\facu2\Facu\target\apache-tomee\conf\logging.properties
+27-Nov-2017 11:24:17.524 INFORMACIÓN [main] sun.reflect.DelegatingMethodAccessorImpl.invoke Command line argument: -javaagent:C:\Users\Andres\Desktop\facu3.zip_expanded\facu2\Facu\target\apache-tomee\lib\openejb-javaagent.jar
+27-Nov-2017 11:24:17.524 INFORMACIÓN [main] sun.reflect.DelegatingMethodAccessorImpl.invoke Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+27-Nov-2017 11:24:17.524 INFORMACIÓN [main] sun.reflect.DelegatingMethodAccessorImpl.invoke Command line argument: -Djava.io.tmpdir=C:\Users\Andres\Desktop\facu3.zip_expanded\facu2\Facu\target\apache-tomee\temp
+27-Nov-2017 11:24:17.524 INFORMACIÓN [main] sun.reflect.DelegatingMethodAccessorImpl.invoke Command line argument: -Dcatalina.base=C:\Users\Andres\Desktop\facu3.zip_expanded\facu2\Facu\target\apache-tomee
+27-Nov-2017 11:24:17.524 INFORMACIÓN [main] sun.reflect.DelegatingMethodAccessorImpl.invoke Command line argument: -Dcatalina.home=C:\Users\Andres\Desktop\facu3.zip_expanded\facu2\Facu\target\apache-tomee
+27-Nov-2017 11:24:17.524 INFORMACIÓN [main] sun.reflect.DelegatingMethodAccessorImpl.invoke Command line argument: -Dcatalina.ext.dirs=C:\Users\Andres\Desktop\facu3.zip_expanded\facu2\Facu\target\apache-tomee\lib
+27-Nov-2017 11:24:17.525 INFORMACIÓN [main] sun.reflect.DelegatingMethodAccessorImpl.invoke Command line argument: -Dorg.apache.tomcat.util.http.ServerCookie.ALLOW_HTTP_SEPARATORS_IN_V0=true
+27-Nov-2017 11:24:17.525 INFORMACIÓN [main] sun.reflect.DelegatingMethodAccessorImpl.invoke Command line argument: -ea
+27-Nov-2017 11:24:17.525 INFORMACIÓN [main] sun.reflect.DelegatingMethodAccessorImpl.invoke La biblioteca nativa de Apache Tomcat basada en ARP que permite un rendimiento óptimo en entornos de desarrollo no ha sido hallada en java.library.path: [C:\Program Files\Java\jdk1.8.0_65\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\system32\wbem;C:\ProgramData\Oracle\Java\javapath;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Program Files\Intel\WiFi\bin;C:\Program Files\Common Files\Intel\WirelessCommon;C:\Program Files (x86)\Skype\Phone;C:\Program Files (x86)\GtkSharp\2.12\bin;C:\Program Files\PuTTY;C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\bin;C:\Program Files (x86)\Skype\Phone\;C:\apache-maven\bin;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;.]
+27-Nov-2017 11:24:18.972 INFORMACIÓN [main] sun.reflect.DelegatingMethodAccessorImpl.invoke Initializing ProtocolHandler ["http-nio-8080"]
+27-Nov-2017 11:24:19.557 INFORMACIÓN [main] sun.reflect.DelegatingMethodAccessorImpl.invoke Using a shared selector for servlet write/read
+27-Nov-2017 11:24:19.562 INFORMACIÓN [main] sun.reflect.DelegatingMethodAccessorImpl.invoke Initializing ProtocolHandler ["ajp-nio-8009"]
+27-Nov-2017 11:24:19.570 INFORMACIÓN [main] sun.reflect.DelegatingMethodAccessorImpl.invoke Using a shared selector for servlet write/read
+27-Nov-2017 11:24:20.863 INFORMACIÓN [main] org.apache.openejb.util.OptionsLog.info Using 'tomee.remote.support=true'
+27-Nov-2017 11:24:20.884 INFORMACIÓN [main] org.apache.openejb.util.OptionsLog.info Using 'openejb.jdbc.datasource-creator=org.apache.tomee.jdbc.TomEEDataSourceCreator'
+27-Nov-2017 11:24:21.113 INFORMACIÓN [main] org.apache.openejb.OpenEJB$Instance.<init> ********************************************************************************
+27-Nov-2017 11:24:21.114 INFORMACIÓN [main] org.apache.openejb.OpenEJB$Instance.<init> OpenEJB http://tomee.apache.org/
+27-Nov-2017 11:24:21.115 INFORMACIÓN [main] org.apache.openejb.OpenEJB$Instance.<init> Startup: Mon Nov 27 11:24:21 ART 2017
+27-Nov-2017 11:24:21.115 INFORMACIÓN [main] org.apache.openejb.OpenEJB$Instance.<init> Copyright 1999-2017 (C) Apache OpenEJB Project, All Rights Reserved.
+27-Nov-2017 11:24:21.115 INFORMACIÓN [main] org.apache.openejb.OpenEJB$Instance.<init> Version: 7.0.4
+27-Nov-2017 11:24:21.115 INFORMACIÓN [main] org.apache.openejb.OpenEJB$Instance.<init> Build date: 20170926
+27-Nov-2017 11:24:21.115 INFORMACIÓN [main] org.apache.openejb.OpenEJB$Instance.<init> Build time: 12:10
+27-Nov-2017 11:24:21.115 INFORMACIÓN [main] org.apache.openejb.OpenEJB$Instance.<init> ********************************************************************************
+27-Nov-2017 11:24:21.116 INFORMACIÓN [main] org.apache.openejb.OpenEJB$Instance.<init> openejb.home = C:\Users\Andres\Desktop\facu3.zip_expanded\facu2\Facu\target\apache-tomee
+27-Nov-2017 11:24:21.116 INFORMACIÓN [main] org.apache.openejb.OpenEJB$Instance.<init> openejb.base = C:\Users\Andres\Desktop\facu3.zip_expanded\facu2\Facu\target\apache-tomee
+27-Nov-2017 11:24:21.118 INFORMACIÓN [main] org.apache.openejb.cdi.CdiBuilder.initializeOWB Created new singletonService org.apache.openejb.cdi.ThreadSingletonServiceImpl@4b44655e
+27-Nov-2017 11:24:21.118 INFORMACIÓN [main] org.apache.openejb.cdi.CdiBuilder.initializeOWB Succeeded in installing singleton service
+27-Nov-2017 11:24:21.221 INFORMACIÓN [main] org.apache.openejb.config.ConfigurationFactory.init TomEE configuration file is 'C:\Users\Andres\Desktop\facu3.zip_expanded\facu2\Facu\target\apache-tomee\conf\tomee.xml'
+27-Nov-2017 11:24:21.314 INFORMACIÓN [main] org.apache.openejb.config.ConfigurationFactory.configureService Configuring Service(id=Tomcat Security Service, type=SecurityService, provider-id=Tomcat Security Service)
+27-Nov-2017 11:24:21.316 INFORMACIÓN [main] org.apache.openejb.config.ConfigurationFactory.configureService Configuring Service(id=Default Transaction Manager, type=TransactionManager, provider-id=Default Transaction Manager)
+27-Nov-2017 11:24:21.319 INFORMACIÓN [main] org.apache.openejb.util.OptionsLog.info Using 'openejb.deployments.classpath=false'
+27-Nov-2017 11:24:21.322 INFORMACIÓN [main] org.apache.openejb.assembler.classic.Assembler.createRecipe Creating TransactionManager(id=Default Transaction Manager)
+27-Nov-2017 11:24:21.421 INFORMACIÓN [main] org.apache.openejb.assembler.classic.Assembler.createRecipe Creating SecurityService(id=Tomcat Security Service)
+27-Nov-2017 11:24:21.820 INFORMACIÓN [main] org.apache.openejb.server.ServiceManager.initServer Creating ServerService(id=cxf-rs)
+27-Nov-2017 11:24:22.322 INFORMACIÓN [main] org.apache.openejb.server.SimpleServiceManager.start   ** Bound Services **
+27-Nov-2017 11:24:22.322 INFORMACIÓN [main] org.apache.openejb.server.SimpleServiceManager.printRow   NAME                 IP              PORT  
+27-Nov-2017 11:24:22.323 INFORMACIÓN [main] org.apache.openejb.server.SimpleServiceManager.start -------
+27-Nov-2017 11:24:22.323 INFORMACIÓN [main] org.apache.openejb.server.SimpleServiceManager.start Ready!
+27-Nov-2017 11:24:22.323 INFORMACIÓN [main] sun.reflect.DelegatingMethodAccessorImpl.invoke Initialization processed in 10677 ms
+27-Nov-2017 11:24:22.379 INFORMACIÓN [main] org.apache.tomee.catalina.OpenEJBNamingContextListener.bindResource Importing a Tomcat Resource with id 'UserDatabase' of type 'org.apache.catalina.UserDatabase'.
+27-Nov-2017 11:24:22.380 INFORMACIÓN [main] org.apache.openejb.assembler.classic.Assembler.createRecipe Creating Resource(id=UserDatabase)
+27-Nov-2017 11:24:22.389 INFORMACIÓN [main] sun.reflect.DelegatingMethodAccessorImpl.invoke Arrancando servicio [Catalina]
+27-Nov-2017 11:24:22.389 INFORMACIÓN [main] sun.reflect.DelegatingMethodAccessorImpl.invoke Starting Servlet Engine: Apache Tomcat (TomEE)/8.5.20 (7.0.4)
+27-Nov-2017 11:24:22.424 INFORMACIÓN [localhost-startStop-1] sun.reflect.DelegatingMethodAccessorImpl.invoke Despliegue del archivo [C:\Users\Andres\Desktop\facu3.zip_expanded\facu2\Facu\target\apache-tomee\webapps\ROOT.war] de la aplicación web
+27-Nov-2017 11:24:22.441 INFORMACIÓN [localhost-startStop-1] org.apache.tomee.catalina.TomcatWebAppBuilder.init ------------------------- localhost -> /
+27-Nov-2017 11:24:22.446 INFORMACIÓN [localhost-startStop-1] org.apache.openejb.util.JarExtractor.extract Extracting jar: C:\Users\Andres\Desktop\facu3.zip_expanded\facu2\Facu\target\apache-tomee\webapps\ROOT.war
+27-Nov-2017 11:24:23.084 INFORMACIÓN [localhost-startStop-1] org.apache.openejb.util.JarExtractor.extract Extracted path: C:\Users\Andres\Desktop\facu3.zip_expanded\facu2\Facu\target\apache-tomee\webapps\ROOT
+27-Nov-2017 11:24:23.085 INFORMACIÓN [localhost-startStop-1] org.apache.openejb.util.OptionsLog.info Using 'openejb.session.manager=org.apache.tomee.catalina.session.QuickSessionManager'
+27-Nov-2017 11:24:24.374 INFORMACIÓN [localhost-startStop-1] org.apache.openejb.config.ConfigurationFactory.configureApplication Configuring enterprise application: C:\Users\Andres\Desktop\facu3.zip_expanded\facu2\Facu\target\apache-tomee\webapps\ROOT
+27-Nov-2017 11:24:24.736 INFORMACIÓN [localhost-startStop-1] org.apache.openejb.config.InitEjbDeployments.deploy Auto-deploying ejb UserController: EjbDeployment(deployment-id=UserController)
+27-Nov-2017 11:24:24.736 INFORMACIÓN [localhost-startStop-1] org.apache.openejb.config.InitEjbDeployments.deploy Auto-deploying ejb PostController: EjbDeployment(deployment-id=PostController)
+27-Nov-2017 11:24:24.736 INFORMACIÓN [localhost-startStop-1] org.apache.openejb.config.InitEjbDeployments.deploy Auto-deploying ejb CommentController: EjbDeployment(deployment-id=CommentController)
+27-Nov-2017 11:24:24.737 INFORMACIÓN [localhost-startStop-1] org.apache.openejb.config.InitEjbDeployments.deploy Auto-deploying ejb ImageController: EjbDeployment(deployment-id=ImageController)
+27-Nov-2017 11:24:24.744 INFORMACIÓN [localhost-startStop-1] org.apache.openejb.config.ConfigurationFactory.configureService Configuring Service(id=Default Stateless Container, type=Container, provider-id=Default Stateless Container)
+27-Nov-2017 11:24:24.745 INFORMACIÓN [localhost-startStop-1] org.apache.openejb.config.AutoConfig.createContainer Auto-creating a container for bean UserController: Container(type=STATELESS, id=Default Stateless Container)
+27-Nov-2017 11:24:24.745 INFORMACIÓN [localhost-startStop-1] org.apache.openejb.assembler.classic.Assembler.createRecipe Creating Container(id=Default Stateless Container)
+27-Nov-2017 11:24:24.797 INFORMACIÓN [localhost-startStop-1] org.apache.openejb.config.ConfigurationFactory.configureService Configuring Service(id=Default Managed Container, type=Container, provider-id=Default Managed Container)
+27-Nov-2017 11:24:24.798 INFORMACIÓN [localhost-startStop-1] org.apache.openejb.config.AutoConfig.createContainer Auto-creating a container for bean .Comp2127805818: Container(type=MANAGED, id=Default Managed Container)
+27-Nov-2017 11:24:24.798 INFORMACIÓN [localhost-startStop-1] org.apache.openejb.assembler.classic.Assembler.createRecipe Creating Container(id=Default Managed Container)
+27-Nov-2017 11:24:24.873 INFORMACIÓN [localhost-startStop-1] org.apache.openejb.core.managed.SimplePassivater.init Using directory C:\Users\Andres\Desktop\facu3.zip_expanded\facu2\Facu\target\apache-tomee\temp for stateful session passivation
+27-Nov-2017 11:24:24.896 INFORMACIÓN [localhost-startStop-1] org.apache.openejb.config.AutoConfig.deploy Configuring PersistenceUnit(name=Facu)
+27-Nov-2017 11:24:24.908 INFORMACIÓN [localhost-startStop-1] org.apache.openejb.config.ConfigurationFactory.configureService Configuring Service(id=Default JDBC Database, type=Resource, provider-id=Default JDBC Database)
+27-Nov-2017 11:24:24.908 INFORMACIÓN [localhost-startStop-1] org.apache.openejb.config.AutoConfig.logAutoCreateResource Auto-creating a Resource with id 'Default JDBC Database' of type 'DataSource for 'Facu'.
+27-Nov-2017 11:24:24.909 INFORMACIÓN [localhost-startStop-1] org.apache.openejb.assembler.classic.Assembler.createRecipe Creating Resource(id=Default JDBC Database)
+27-Nov-2017 11:24:25.715 INFORMACIÓN [localhost-startStop-1] org.hsqldb.persist.Logger.logInfoEvent Checkpoint start
+27-Nov-2017 11:24:25.716 INFORMACIÓN [localhost-startStop-1] org.hsqldb.persist.Logger.logInfoEvent checkpointClose start
+27-Nov-2017 11:24:26.308 INFORMACIÓN [localhost-startStop-1] org.hsqldb.persist.Logger.logInfoEvent checkpointClose end
+27-Nov-2017 11:24:26.310 INFORMACIÓN [localhost-startStop-1] org.hsqldb.persist.Logger.logInfoEvent Checkpoint end - txts: 1
+27-Nov-2017 11:24:26.620 INFORMACIÓN [localhost-startStop-1] org.apache.openejb.config.ConfigurationFactory.configureService Configuring Service(id=Default Unmanaged JDBC Database, type=Resource, provider-id=Default Unmanaged JDBC Database)
+27-Nov-2017 11:24:26.620 INFORMACIÓN [localhost-startStop-1] org.apache.openejb.config.AutoConfig.logAutoCreateResource Auto-creating a Resource with id 'Default Unmanaged JDBC Database' of type 'DataSource for 'Facu'.
+27-Nov-2017 11:24:26.621 INFORMACIÓN [localhost-startStop-1] org.apache.openejb.assembler.classic.Assembler.createRecipe Creating Resource(id=Default Unmanaged JDBC Database)
+27-Nov-2017 11:24:26.647 INFORMACIÓN [localhost-startStop-1] org.apache.openejb.config.AutoConfig.setJtaDataSource Adjusting PersistenceUnit Facu <jta-data-source> to Resource ID 'Default JDBC Database' from 'MysqlDs'
+27-Nov-2017 11:24:26.648 INFORMACIÓN [localhost-startStop-1] org.apache.openejb.config.AutoConfig.setNonJtaDataSource Adjusting PersistenceUnit Facu <non-jta-data-source> to Resource ID 'Default Unmanaged JDBC Database' from 'null'
+27-Nov-2017 11:24:26.684 INFORMACIÓN [localhost-startStop-1] org.apache.openejb.config.AppInfoBuilder.build Enterprise application "C:\Users\Andres\Desktop\facu3.zip_expanded\facu2\Facu\target\apache-tomee\webapps\ROOT" loaded.
+27-Nov-2017 11:24:26.953 INFORMACIÓN [localhost-startStop-1] org.apache.openejb.assembler.classic.Assembler.createApplication Assembling app: C:\Users\Andres\Desktop\facu3.zip_expanded\facu2\Facu\target\apache-tomee\webapps\ROOT
+27-Nov-2017 11:24:27.510 INFORMACIÓN [localhost-startStop-1] null.openjpa.Runtime OpenJPA dynamically loaded a validation provider.
+27-Nov-2017 11:24:27.536 INFORMACIÓN [localhost-startStop-1] org.apache.openejb.assembler.classic.ReloadableEntityManagerFactory.createDelegate PersistenceUnit(name=Facu, provider=org.apache.openjpa.persistence.PersistenceProviderImpl) - provider time 545ms
+27-Nov-2017 11:24:27.671 INFORMACIÓN [localhost-startStop-1] org.apache.openejb.assembler.classic.JndiBuilder.bind Jndi(name=UserControllerLocalBean) --> Ejb(deployment-id=UserController)
+27-Nov-2017 11:24:27.672 INFORMACIÓN [localhost-startStop-1] org.apache.openejb.assembler.classic.JndiBuilder.bind Jndi(name=global/UserController!controller.UserController) --> Ejb(deployment-id=UserController)
+27-Nov-2017 11:24:27.673 INFORMACIÓN [localhost-startStop-1] org.apache.openejb.assembler.classic.JndiBuilder.bind Jndi(name=global/UserController) --> Ejb(deployment-id=UserController)
+27-Nov-2017 11:24:27.674 INFORMACIÓN [localhost-startStop-1] org.apache.openejb.assembler.classic.JndiBuilder.bind Jndi(name=PostControllerLocalBean) --> Ejb(deployment-id=PostController)
+27-Nov-2017 11:24:27.674 INFORMACIÓN [localhost-startStop-1] org.apache.openejb.assembler.classic.JndiBuilder.bind Jndi(name=global/PostController!controller.PostController) --> Ejb(deployment-id=PostController)
+27-Nov-2017 11:24:27.675 INFORMACIÓN [localhost-startStop-1] org.apache.openejb.assembler.classic.JndiBuilder.bind Jndi(name=global/PostController) --> Ejb(deployment-id=PostController)
+27-Nov-2017 11:24:27.676 INFORMACIÓN [localhost-startStop-1] org.apache.openejb.assembler.classic.JndiBuilder.bind Jndi(name=CommentControllerLocalBean) --> Ejb(deployment-id=CommentController)
+27-Nov-2017 11:24:27.677 INFORMACIÓN [localhost-startStop-1] org.apache.openejb.assembler.classic.JndiBuilder.bind Jndi(name=global/CommentController!controller.CommentController) --> Ejb(deployment-id=CommentController)
+27-Nov-2017 11:24:27.677 INFORMACIÓN [localhost-startStop-1] org.apache.openejb.assembler.classic.JndiBuilder.bind Jndi(name=global/CommentController) --> Ejb(deployment-id=CommentController)
+27-Nov-2017 11:24:27.677 INFORMACIÓN [localhost-startStop-1] org.apache.openejb.assembler.classic.JndiBuilder.bind Jndi(name=ImageControllerLocalBean) --> Ejb(deployment-id=ImageController)
+27-Nov-2017 11:24:27.677 INFORMACIÓN [localhost-startStop-1] org.apache.openejb.assembler.classic.JndiBuilder.bind Jndi(name=global/ImageController!controller.ImageController) --> Ejb(deployment-id=ImageController)
+27-Nov-2017 11:24:27.678 INFORMACIÓN [localhost-startStop-1] org.apache.openejb.assembler.classic.JndiBuilder.bind Jndi(name=global/ImageController) --> Ejb(deployment-id=ImageController)
+27-Nov-2017 11:24:27.724 INFORMACIÓN [localhost-startStop-1] org.apache.openejb.cdi.CdiBuilder.initSingleton Existing thread singleton service in SystemInstance(): org.apache.openejb.cdi.ThreadSingletonServiceImpl@4b44655e
+27-Nov-2017 11:24:27.868 INFORMACIÓN [localhost-startStop-1] org.apache.openejb.cdi.OpenEJBLifecycle.startApplication OpenWebBeans Container is starting...
+27-Nov-2017 11:24:27.878 INFORMACIÓN [localhost-startStop-1] org.apache.webbeans.plugins.PluginLoader.startUp Adding OpenWebBeansPlugin : [CdiPlugin]
+27-Nov-2017 11:24:28.643 INFORMACIÓN [localhost-startStop-1] org.apache.webbeans.config.BeansDeployer.validateInjectionPoints All injection points were validated successfully.
+27-Nov-2017 11:24:28.648 INFORMACIÓN [localhost-startStop-1] org.apache.openejb.cdi.OpenEJBLifecycle.startApplication OpenWebBeans Container has started, it took 780 ms.
+27-Nov-2017 11:24:28.650 INFORMACIÓN [localhost-startStop-1] org.apache.openejb.assembler.classic.Assembler.startEjbs Created Ejb(deployment-id=PostController, ejb-name=PostController, container=Default Stateless Container)
+27-Nov-2017 11:24:28.650 INFORMACIÓN [localhost-startStop-1] org.apache.openejb.assembler.classic.Assembler.startEjbs Created Ejb(deployment-id=UserController, ejb-name=UserController, container=Default Stateless Container)
+27-Nov-2017 11:24:28.656 INFORMACIÓN [localhost-startStop-1] org.apache.openejb.assembler.classic.Assembler.startEjbs Created Ejb(deployment-id=CommentController, ejb-name=CommentController, container=Default Stateless Container)
+27-Nov-2017 11:24:28.657 INFORMACIÓN [localhost-startStop-1] org.apache.openejb.assembler.classic.Assembler.startEjbs Created Ejb(deployment-id=ImageController, ejb-name=ImageController, container=Default Stateless Container)
+27-Nov-2017 11:24:28.683 INFORMACIÓN [localhost-startStop-1] org.apache.openejb.assembler.classic.Assembler.startEjbs Started Ejb(deployment-id=PostController, ejb-name=PostController, container=Default Stateless Container)
+27-Nov-2017 11:24:28.692 INFORMACIÓN [localhost-startStop-1] org.apache.openejb.assembler.classic.Assembler.startEjbs Started Ejb(deployment-id=UserController, ejb-name=UserController, container=Default Stateless Container)
+27-Nov-2017 11:24:28.715 INFORMACIÓN [localhost-startStop-1] org.apache.openejb.assembler.classic.Assembler.startEjbs Started Ejb(deployment-id=CommentController, ejb-name=CommentController, container=Default Stateless Container)
+27-Nov-2017 11:24:28.728 INFORMACIÓN [localhost-startStop-1] org.apache.openejb.assembler.classic.Assembler.startEjbs Started Ejb(deployment-id=ImageController, ejb-name=ImageController, container=Default Stateless Container)
+27-Nov-2017 11:24:28.737 INFORMACIÓN [localhost-startStop-1] org.apache.openejb.assembler.classic.Assembler.createApplication Deployed Application(path=C:\Users\Andres\Desktop\facu3.zip_expanded\facu2\Facu\target\apache-tomee\webapps\ROOT)
+27-Nov-2017 11:24:29.274 INFORMACIÓN [localhost-startStop-1] org.apache.tomee.myfaces.TomEEMyFacesContainerInitializer.addListener Installing <listener>org.apache.myfaces.webapp.StartupServletContextListener</listener>
+27-Nov-2017 11:24:29.664 INFORMACIÓN [localhost-startStop-1] org.apache.myfaces.config.DefaultFacesConfigurationProvider.getStandardFacesConfig Reading standard config META-INF/standard-faces-config.xml
+27-Nov-2017 11:24:30.741 INFORMACIÓN [localhost-startStop-1] org.apache.myfaces.config.DefaultFacesConfigurationProvider.getWebAppFacesConfig Reading config /WEB-INF/faces-config.xml
+27-Nov-2017 11:24:30.819 INFORMACIÓN [localhost-startStop-1] org.apache.myfaces.config.DefaultFacesConfigurationProvider.getClassloaderFacesConfig Reading config : jar:file:/C:/Users/Andres/Desktop/facu3.zip_expanded/facu2/Facu/target/apache-tomee/lib/openwebbeans-el22-1.7.4.jar!/META-INF/faces-config.xml
+27-Nov-2017 11:24:30.821 INFORMACIÓN [localhost-startStop-1] org.apache.myfaces.config.DefaultFacesConfigurationProvider.getClassloaderFacesConfig Reading config : jar:file:/C:/Users/Andres/Desktop/facu3.zip_expanded/facu2/Facu/target/apache-tomee/lib/openwebbeans-jsf-1.7.4.jar!/META-INF/faces-config.xml
+27-Nov-2017 11:24:31.055 INFORMACIÓN [localhost-startStop-1] org.apache.myfaces.config.LogMetaInfUtils.logArtifact Artifact 'myfaces-api' was found in version '2.2.12' from path 'file:/C:/Users/Andres/Desktop/facu3.zip_expanded/facu2/Facu/target/apache-tomee/lib/myfaces-api-2.2.12.jar'
+27-Nov-2017 11:24:31.056 INFORMACIÓN [localhost-startStop-1] org.apache.myfaces.config.LogMetaInfUtils.logArtifact Artifact 'myfaces-impl' was found in version '2.2.12' from path 'file:/C:/Users/Andres/Desktop/facu3.zip_expanded/facu2/Facu/target/apache-tomee/lib/myfaces-impl-2.2.12.jar'
+27-Nov-2017 11:24:31.084 INFORMACIÓN [localhost-startStop-1] org.apache.myfaces.util.ExternalSpecifications.isCDIAvailable MyFaces CDI support enabled
+27-Nov-2017 11:24:31.088 INFORMACIÓN [localhost-startStop-1] org.apache.myfaces.spi.impl.DefaultInjectionProviderFactory.getInjectionProvider Using InjectionProvider org.apache.myfaces.spi.impl.CDIAnnotationDelegateInjectionProvider
+27-Nov-2017 11:24:31.221 INFORMACIÓN [localhost-startStop-1] org.apache.myfaces.util.ExternalSpecifications.isBeanValidationAvailable MyFaces Bean Validation support enabled
+27-Nov-2017 11:24:31.299 INFORMACIÓN [localhost-startStop-1] org.apache.myfaces.application.ApplicationImpl.getProjectStage Couldn't discover the current project stage, using Production
+27-Nov-2017 11:24:31.300 INFORMACIÓN [localhost-startStop-1] org.apache.myfaces.config.FacesConfigurator.handleSerialFactory Serialization provider : class org.apache.myfaces.shared_impl.util.serial.DefaultSerialFactory
+27-Nov-2017 11:24:31.319 INFORMACIÓN [localhost-startStop-1] org.apache.myfaces.config.annotation.DefaultLifecycleProviderFactory.getLifecycleProvider Using LifecycleProvider org.apache.myfaces.config.annotation.Tomcat7AnnotationLifecycleProvider
+27-Nov-2017 11:24:31.797 INFORMACIÓN [localhost-startStop-1] org.apache.myfaces.webapp.AbstractFacesInitializer.initFaces ServletContext initialized.
+27-Nov-2017 11:24:31.805 INFORMACIÓN [localhost-startStop-1] org.apache.myfaces.util.ExternalSpecifications.isUnifiedELAvailable MyFaces Unified EL support enabled
+27-Nov-2017 11:24:31.810 INFORMACIÓN [localhost-startStop-1] org.apache.myfaces.view.facelets.ViewPoolProcessor.initialize org.apache.myfaces.CACHE_EL_EXPRESSIONS web config parameter is set to "noCache". To enable view pooling this param must be set to "alwaysRecompile". View Pooling disabled.
+27-Nov-2017 11:24:31.825 INFORMACIÓN [localhost-startStop-1] org.apache.myfaces.webapp.StartupServletContextListener.contextInitialized MyFaces Core has started, it took [2535] ms.
+27-Nov-2017 11:24:32.008 INFORMACIÓN [localhost-startStop-1] sun.reflect.DelegatingMethodAccessorImpl.invoke Deployment of web application archive [C:\Users\Andres\Desktop\facu3.zip_expanded\facu2\Facu\target\apache-tomee\webapps\ROOT.war] has finished in [9.554] ms
+27-Nov-2017 11:24:32.029 INFORMACIÓN [Catalina-startStop-1] org.apache.catalina.core.StandardContext.setClassLoaderProperty Unable to set the web application class loader property [clearReferencesRmiTargets] to [true] as the property does not exist.
+27-Nov-2017 11:24:32.040 INFORMACIÓN [main] sun.reflect.DelegatingMethodAccessorImpl.invoke Starting ProtocolHandler ["http-nio-8080"]
+27-Nov-2017 11:24:32.054 INFORMACIÓN [main] sun.reflect.DelegatingMethodAccessorImpl.invoke Starting ProtocolHandler ["ajp-nio-8009"]
+27-Nov-2017 11:24:32.058 INFORMACIÓN [main] sun.reflect.DelegatingMethodAccessorImpl.invoke Server startup in 9733 ms
+27-Nov-2017 11:25:36.380 INFORMACIÓN [http-nio-8080-exec-3] org.apache.myfaces.el.unified.ResolverBuilderBase.sortELResolvers Chain of EL resolvers for JSP sorted with: org.apache.myfaces.el.unified.OpenWebBeansELResolverComparator@4e96225e and the result order is [org.apache.myfaces.el.unified.resolver.implicitobject.ImplicitObjectResolver@b94b5e8, org.apache.myfaces.el.FlashELResolver@3d85ba8d, org.apache.myfaces.el.unified.resolver.ManagedBeanResolver@3a55ddc9, org.apache.myfaces.el.unified.resolver.ResourceBundleResolver@45ae8c0f, org.apache.myfaces.el.unified.resolver.ResourceResolver@6bbb4aa7, org.apache.webbeans.el22.WebBeansELResolver@7b7ac48f, org.apache.myfaces.el.convert.VariableResolverToELResolver@6f55f5bc, org.apache.myfaces.el.convert.PropertyResolverToELResolver@5eaac2ad]
+27-Nov-2017 11:25:36.625 INFORMACIÓN [http-nio-8080-exec-3] org.apache.myfaces.el.unified.ResolverBuilderBase.sortELResolvers Chain of EL resolvers for Faces sorted with: org.apache.myfaces.el.unified.OpenWebBeansELResolverComparator@4e96225e and the result order is [org.apache.myfaces.el.unified.resolver.implicitobject.ImplicitObjectResolver@6ff555ad, org.apache.myfaces.el.unified.resolver.CompositeComponentELResolver@4286aa60, org.apache.webbeans.el22.WebBeansELResolver@7b7ac48f, org.apache.myfaces.el.convert.VariableResolverToELResolver@2be5f99, org.apache.myfaces.el.convert.PropertyResolverToELResolver@a094ac9, org.apache.myfaces.el.FlashELResolver@4f142e18, org.apache.myfaces.el.unified.resolver.ManagedBeanResolver@38365830, org.apache.myfaces.el.unified.resolver.ResourceResolver@48849a38, javax.el.ResourceBundleELResolver@89bcee3, org.apache.myfaces.el.unified.resolver.ResourceBundleResolver@66114506, org.apache.el.stream.StreamELResolverImpl@6cec762c, javax.el.StaticFieldELResolver@d564d3, javax.el.MapELResolver@56ef4efc, javax.el.ListELResolver@3aba0852, javax.el.ArrayELResolver@3568443f, javax.el.BeanELResolver@1eb05dbd]
+27-Nov-2017 11:25:36.899 INFORMACIÓN [http-nio-8080-exec-3] javax.faces.component._ExternalSpecifications.isBeanValidationAvailable MyFaces Bean Validation support enabled
+27-Nov-2017 11:26:06.334 INFORMACIÓN [http-nio-8080-exec-5] null.openjpa.Runtime Starting OpenJPA 2.4.2
+27-Nov-2017 11:26:06.532 INFORMACIÓN [http-nio-8080-exec-5] null.openjpa.jdbc.JDBC Using dictionary class "org.apache.openjpa.jdbc.sql.HSQLDictionary" (HSQL Database Engine 2.3.2 ,HSQL Database Engine Driver 2.3.2).
+27-Nov-2017 11:26:06.631 INFORMACIÓN [http-nio-8080-exec-5] null.openjpa.jdbc.JDBC Connected to HSQL Database Engine version 2.2 using JDBC driver HSQL Database Engine Driver version 2.3.2. 
