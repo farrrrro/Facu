@@ -28,6 +28,7 @@ public class PostMb {
 	
 	private Part file;
 	
+
 	private User currentUser;
 	
 	@NotNull
@@ -77,6 +78,14 @@ public class PostMb {
 
 	public void setContent(String content) {
 		this.content = content;
+	}
+	
+	public Part getFile() {
+		return file;
+	}
+
+	public void setFile(Part file) {
+		this.file = file;
 	}
 	
 }
