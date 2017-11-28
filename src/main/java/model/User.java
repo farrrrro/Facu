@@ -2,12 +2,15 @@ package model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+import model.Image;
 
 @Entity
 public class User {
@@ -29,6 +32,8 @@ public class User {
     @Column(unique=true)
 	private String email;
 
+    @ManyToOne(fetch=FetchType.EAGER)
+    private Image image;
 
 	public int getId() {
 		return id;
@@ -60,6 +65,14 @@ public class User {
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+	
+	public Image getImage() {
+		return image;
+	}
+
+	public void setImage(Image image) {
+		this.image = image;
 	}
 
 }
