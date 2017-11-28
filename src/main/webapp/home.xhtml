@@ -45,7 +45,7 @@
 		</div>
 	</h:form>
 	<h:panelGroup layout="block" id="obtainAll">
-			<ui:repeat var="post" value="#{postMb.obtainAll}">
+			<ui:repeat var="post" value="#{postMb.obtainAll()}">
 				<div class="panel panel-default">
 					<div class="panel-heading">
 						<h3 class="panel-title">
@@ -76,7 +76,7 @@
 							</ui:repeat>
 							<h:form>
 								<h:inputText value="#{commentMb.comment}" styleClass="form-control" />
-								<h:commandLink styleClass="btn btn-primary" action="#{commentMb.create(post)}" >Comentar</h:commandLink>
+								<h:commandLink styleClass="btn btn-primary" action="#{commentMb.create(Post post)}" >Comentar</h:commandLink>
 							</h:form>
 						</ul>
 					</div>
