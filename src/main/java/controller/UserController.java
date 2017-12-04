@@ -40,4 +40,20 @@ public class UserController {
 			throw new RuntimeException("Usuario ya existe");
 		}
 	}
+	
+	public boolean changePassword(String username, String newPassword){
+		entityManager.getTransaction().begin();
+		String hql = "UPDATE User SET password=?1 WHERE username=?2";
+		int executeUpdate = entityManager.createQuery(hql).setParameter(1, newPassword).setParameter(2, username).executeUpdate();
+		entityManager.getTransaction().commit();
+	    entityManager.close();
+	    if(executeUpdate > 1)
+	    	return true;
+		
+		return false;
+	}
+	
+	public void update(User user){
+		entityManager.merge(user);
+	}
 }

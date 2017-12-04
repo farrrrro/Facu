@@ -40,7 +40,7 @@ public class AuthFilter implements Filter{
 
 			final String path = getCurrentPath(reqt);
 			
-			// Si es publico
+			/*// Si es publico
 			if (publicPath.stream().anyMatch((pp) -> path.matches(pp))) {
 				chain.doFilter(request, response);
 				return;
@@ -53,7 +53,9 @@ public class AuthFilter implements Filter{
 			}
 			
 			resp.sendRedirect(reqt.getContextPath() + "/login.xhtml");
-
+*/
+			chain.doFilter(request, response);
+			return;
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

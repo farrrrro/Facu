@@ -42,6 +42,7 @@ public class AuthMb implements Serializable {
 	}
 	
 	public String logout(){
+		currentUser = null;
 		return "login?faces-redirect=true";
 	}
 

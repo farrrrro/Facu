@@ -1,6 +1,8 @@
 package view;
 import java.util.List;
 
+import javax.faces.application.FacesMessage;
+import javax.faces.context.FacesContext;
 import javax.inject.Inject;
 import javax.inject.Named;
 import javax.servlet.http.Part;
@@ -45,15 +47,33 @@ public class PostMb {
 			content = null;
 		} catch (Exception e){
 			e.printStackTrace();
+			FacesMessage msg = new FacesMessage(FacesMessage.SEVERITY_ERROR,"Error interno", null);
+			FacesContext.getCurrentInstance().addMessage(null, msg);
 		}
 	}
 	
 	public List<Post> obtain(){
-		return postCntr.obtain(currentUser);
+		try{
+			return postCntr.obtain(currentUser);
+		} catch (Exception e){
+			e.printStackTrace();
+			FacesMessage msg = new FacesMessage(FacesMessage.SEVERITY_ERROR,"Error interno", null);
+			FacesContext.getCurrentInstance().addMessage(null, msg);
+			return null;
+		}
+		
 	}
 	
 	public List<Post> obtainAll(){
-		return postCntr.obtainAll();
+		try{
+			return postCntr.obtainAll();
+		} catch (Exception e){
+			e.printStackTrace();
+			FacesMessage msg = new FacesMessage(FacesMessage.SEVERITY_ERROR,"Error interno", null);
+			FacesContext.getCurrentInstance().addMessage(null, msg);
+			return null;
+		}
+		
 	}
 
 	public PostController getPostCntr() {

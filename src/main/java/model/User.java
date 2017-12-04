@@ -8,6 +8,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 import model.Image;
@@ -30,6 +31,7 @@ public class User {
 	
 	@NotNull
     @Column(unique=true)
+    @Pattern(regexp = "^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$", message = "El formato de e-mail es invalido.")
 	private String email;
 
     @ManyToOne(fetch=FetchType.EAGER)
@@ -73,6 +75,15 @@ public class User {
 
 	public void setImage(Image image) {
 		this.image = image;
+	}
+	
+	public boolean hasProfileImage(){
+		if(this.image != null){
+			return true;
+		}else{
+			return false;
+		}
+			
 	}
 
 }
