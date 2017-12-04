@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+<ui:composition>
+	<div class="side-scroll header-navbar-fixed">
+		<header id="header-navbar" class="content-mini content-mini-full">
+			<div class="content-boxed">
+				<h:form>
+					<nav>
+						<h:link value="Home" styleClass="btn btn" outcome="index" />
+						<h:link value="Entrar" styleClass="btn btn-success"
+							outcome="login" rendered="#{not authMb.logged}" />
+						<h:link value="Registrarse" styleClass="btn btn-info"
+							outcome="register" rendered="#{not authMb.logged}" />
+						<h:link value="Mi perfil" styleClass="btn btn-info"
+							outcome="myProfile" rendered="#{authMb.logged}" />
+						<h:commandLink value="Salir" styleClass="btn btn-danger"
+							action="#{authMb.logout()}" rendered="#{authMb.logged}" />
+					</nav>
+				</h:form>
+			</div>
+		</header>
+	</div>
+</ui:composition>
+</html>

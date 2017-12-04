@@ -10,15 +10,11 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<ui:include src="/WEB-INF/template/menu.xhtml" />
 </h:head>
 <h:body>
 	<h1>Bienvenido a Tuirer</h1>
 	<h:form>
-		<nav>
-			<h:link value="Entrar" styleClass="btn btn-success" outcome="login" rendered="#{not authMb.logged}" />
-			<h:link value="Registrarse" styleClass="btn btn-info" outcome="register"  rendered="#{not authMb.logged}"/>
-			<h:commandLink value="Salir" styleClass="btn btn-danger" action="#{authMb.logout()}"   rendered="#{authMb.logged}"/>
-		</nav>
 	</h:form>
 </h:body>
 </html>

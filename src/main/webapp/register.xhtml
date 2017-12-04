@@ -38,6 +38,12 @@
 									<h:inputSecret value="#{registerMb.confirmPass}"
 										styleClass="form-control" />
 							</div>
+							 <div class="form-group">
+		                            <label class="col-xs-12" for="example-file-input">Foto de perfil</label>
+		                            <div class="col-xs-12">
+		                                <h:inputFile id="file" value="#{registerMb.file}"/>
+		                            </div>
+                       			</div>
 							<h:commandLink styleClass="btn btn-success"  action="#{registerMb.register()}">
 								Registrar
 							</h:commandLink>
