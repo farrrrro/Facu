@@ -18,11 +18,11 @@
 	<h:panelGroup styleClass="block">
 	        <div class="block-content bg-primary-op text-center overflow-hidden">
 	            <div class="push-30-t push animated fadeInDown">
-	                <img class="img-avatar img-avatar96 img-avatar-thumb" src="/image/#{loginMb.currentUser.image.path}"/>
+	                <img class="img-avatar img-avatar96 img-avatar-thumb" src="/image/#{authMb.currentUser.image.path}"/>
 	            </div>
 	            <div class="push-30 animated fadeInUp">
-	                <h2 class="h4 font-w600 text-white push-5"><h:outputText value="#{loginMb.currentUser.userName}"/></h2>
-	                <h3 class="h5 text-white-op"><h:outputText value="#{loginMb.currentUser.email}"/></h3>
+	                <h2 class="h4 font-w600 text-white push-5"><h:outputText value="#{authMb.currentUser.username}"/></h2>
+	                <h3 class="h5 text-white-op"><h:outputText value="#{authMb.currentUser.email}"/></h3>
 	            </div>
 	        </div>   
 	</h:panelGroup>
@@ -34,13 +34,13 @@
 	                    <div class="form-group">
 	                        <div class="col-xs-6">
 	                            <label>E-mail</label>
-	                            <div class="form-control-static font-w700"><h:outputText value="#{loginMb.currentUser.email}"/></div>
+	                            <div class="form-control-static font-w700"><h:outputText value="#{authMb.currentUser.email}"/></div>
 	                        </div>
 	                    </div>
 	                    <div class="form-group">
 	                        <div class="col-xs-12">
 	                            <label for="profile-email">Nombre de usuario</label>
-	                            <h:inputText value="#{profileMb.newUsername}" styleClass="form-control input-lg" type="text" id="profile-email" name="profile-email"></h:inputText>                            
+	                             <div class="form-control-static font-w700"><h:outputText value="#{authMb.currentUser.username}"/></div>                          
 	                        </div>
 	                    </div>
 	                    <div class="form-group">

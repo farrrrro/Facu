@@ -52,8 +52,9 @@
 								styleClass="img-avatar img-avatar96 img-avatar-thumb"
 								style="width:60px" value="/image/#{post.user.image.path}" />
 						</h:panelGroup>
-						<h:outputText value="#{post.user.name}" />
-						<small> <h:outputText value="#{post.dateTime}">
+						<h:outputText value="#{post.user.username}" />
+						<small> 
+								<h:outputText value="#{post.dateTime}">
 								<f:convertDateTime pattern="dd/MM/yyyy HH:mm" />
 							</h:outputText>
 						</small>
@@ -69,8 +70,8 @@
 
 						<ui:repeat var="comment" value="#{commentMb.listByPost(post)}">
 							<li class="list-group-item"><strong> <h:outputText
-										value="#{comment.user.name}" />
-							</strong> <small> <h:outputText value="#{comment.dateTime}">
+										value="#{comment.user.username}" />
+							</strong> <small> <h:outputText value="#{comment.date}">
 										<f:convertDateTime pattern="dd/MM/yyyy HH:mm" />
 									</h:outputText>
 							</small> <h:outputText value="#{comment.content}" /></li>
