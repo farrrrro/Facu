@@ -18,7 +18,6 @@ public class PostController {
     @PersistenceContext
     private EntityManager entityManager;
 
-    
 	public void generate(User user, String content, Image img) {
 		Post p = new Post();
 		p.setDateTime(new Date());

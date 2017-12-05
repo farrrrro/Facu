@@ -21,7 +21,7 @@ public class ProfileMb {
 	ImageController imgController;
 	
 	@Inject
-	AuthMb loginMb;
+	AuthMb authMb;
 	
 	private String oldPassword;
 	private String newPassword;
@@ -34,10 +34,11 @@ public class ProfileMb {
 		
 		boolean errorCarga = false;
 						
-		user.setEmail(loginMb.getCurrentUser().getEmail());
-		
+		user.setEmail(authMb.getCurrentUser().getEmail());
+		user.setUsername(authMb.getCurrentUser().getUsername());
+		user.setId(authMb.getCurrentUser().getId());
 		if(oldPassword.length() > 0 && newPassword.length() > 0){
-			if(userController.getAuthUser(loginMb.getCurrentUser().getUsername(), oldPassword) != null){
+			if(userController.getAuthUser(authMb.getCurrentUser().getUsername(), oldPassword) != null){
 				if(newPassword.equals(confirmPassword)){
 					user.setPassword(newPassword);
 				}else{					
@@ -50,8 +51,6 @@ public class ProfileMb {
 				FacesContext.getCurrentInstance().addMessage(null, msg);
 				errorCarga = true;
 			}
-		}else{			
-			user.setUsername(loginMb.getCurrentUser().getPassword());
 		}
 		
 		if(file != null && file.getSize() > 0){
@@ -68,12 +67,12 @@ public class ProfileMb {
 				errorCarga = true;
 			}	
 		}else{
-			user.setImage(loginMb.getCurrentUser().getImage());
+			user.setImage(authMb.getCurrentUser().getImage());
 		}
 								
 		if(!errorCarga){
 			userController.update(user);
-			loginMb.setCurrentUser(user);
+			authMb.setCurrentUser(user);
 			return "index";
 		}else{
 			return null;
