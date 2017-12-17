@@ -19,17 +19,17 @@ public class ImageMb extends HttpServlet {
 	private static final long serialVersionUID = 1251001105853430500L;
 	
 	@Inject
-	private ImageController imgCtnrl;
+	private ImageController imgCtrl;
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String [] urlParts = req.getRequestURI().split("/");
 		String path =  urlParts[urlParts.length - 1];
 		try{
-			Image img = imgCtnrl.findByPath(path);
+			Image img = imgCtrl.findByPath(path);
 			resp.setContentLength((int) img.getSize());
 			resp.setContentType(img.getType());
-			InputStream in = imgCtnrl.read(path);
+			InputStream in = imgCtrl.read(path);
 			OutputStream out = resp.getOutputStream();
 			int reads;
 			byte[] buffer = new byte [1024];

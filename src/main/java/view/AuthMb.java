@@ -17,7 +17,7 @@ public class AuthMb implements Serializable {
 	private static final long serialVersionUID = 791515424619865689L;
 
 	@Inject
-	private UserController userCntr;
+	private UserController userCtrl;
 	
 	@NotNull
 	private String username;
@@ -32,7 +32,7 @@ public class AuthMb implements Serializable {
 	}
 	
 	public String loggin(){
-		currentUser = userCntr.getAuthUser(username, password);
+		currentUser = userCtrl.getAuthUser(username, password);
 		username = null;
 		password = null;
 		if(isLogged())

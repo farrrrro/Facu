@@ -4,6 +4,7 @@ import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
 import javax.inject.Inject;
 import javax.inject.Named;
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.http.Part;
 
 import model.Image;
@@ -12,13 +13,17 @@ import controller.ImageController;
 import controller.UserController;
 
 @Named
+@MultipartConfig(location="/tmp",
+fileSizeThreshold=1024*1024, 
+maxFileSize=1024*1024*5,
+maxRequestSize=1024*1024*5*5)
 public class ProfileMb {
 	
 	@Inject
-	UserController userController;
+	UserController userCtrl;
 	
 	@Inject
-	ImageController imgController;
+	ImageController imgCtrl;
 	
 	@Inject
 	AuthMb authMb;
@@ -38,7 +43,7 @@ public class ProfileMb {
 		user.setUsername(authMb.getCurrentUser().getUsername());
 		user.setId(authMb.getCurrentUser().getId());
 		if(oldPassword.length() > 0 && newPassword.length() > 0){
-			if(userController.getAuthUser(authMb.getCurrentUser().getUsername(), oldPassword) != null){
+			if(userCtrl.getAuthUser(authMb.getCurrentUser().getUsername(), oldPassword) != null){
 				if(newPassword.equals(confirmPassword)){
 					user.setPassword(newPassword);
 				}else{					
@@ -57,7 +62,7 @@ public class ProfileMb {
 			try{
 				Image img = null;
 				if(file.getContentType().startsWith("image/")){
-					img = imgController.upload(file);
+					img = imgCtrl.upload(file);
 					user.setImage(img);
 				}
 			} catch (Exception e){
@@ -71,7 +76,7 @@ public class ProfileMb {
 		}
 								
 		if(!errorCarga){
-			userController.update(user);
+			userCtrl.update(user);
 			authMb.setCurrentUser(user);
 			return "index";
 		}else{

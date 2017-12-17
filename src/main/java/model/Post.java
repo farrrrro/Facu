@@ -23,7 +23,7 @@ public class Post {
 	private int id;
 	
 	@NotNull
-    @ManyToOne(fetch=FetchType.LAZY)
+    @ManyToOne
 	private User user;
 	
 	@NotNull
@@ -34,8 +34,14 @@ public class Post {
     @Size(min=2,max=255)
 	private String content;
 	
-    @ManyToOne(fetch=FetchType.EAGER)
+    @ManyToOne
     private Image image;
+    
+    @Override
+	public String toString() {
+		return "Post [id=" + id + ", content=" + content + ", user=" + user + ", image=" + image + ", dateTime=" + dateTime
+				+ "]";
+	}
 
 	public int getId() {
 		return id;

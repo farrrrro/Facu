@@ -21,7 +21,7 @@ import model.Image;
 public class RegisterMb {
 
 	@Inject
-	private UserController userCntr;
+	private UserController userCtrl;
 	
 	private User user = new User();
 	
@@ -29,7 +29,7 @@ public class RegisterMb {
 	private String confirmPass;
 	
 	@Inject
-	ImageController imageController;
+	ImageController imageCtrl;
 
 	
 	private Part file;
@@ -45,7 +45,7 @@ public class RegisterMb {
 				try{
 					Image img = null;
 					if(file.getContentType().startsWith("image/")){
-						img = imageController.upload(file);
+						img = imageCtrl.upload(file);
 						user.setImage(img);
 					}
 				} catch (Exception e){
@@ -54,7 +54,7 @@ public class RegisterMb {
 					FacesContext.getCurrentInstance().addMessage(null, msg);
 				}	
 			}
-			userCntr.addUser(user);
+			userCtrl.addUser(user);
 			user = null;
 			FacesMessage msg = new FacesMessage(FacesMessage.SEVERITY_INFO, "Se registró el usuario", null);
 			FacesContext.getCurrentInstance().addMessage(null, msg);

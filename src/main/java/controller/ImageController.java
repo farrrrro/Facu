@@ -22,7 +22,7 @@ public class ImageController {
 	@PersistenceContext
 	private EntityManager em;
 	
-	private static final File UPLOAD_DIR = new File("D:/storage/images/");
+	private static final File UPLOAD_DIR = new File("C:/images/");
 	
 	private static final char [] CHARS = "abcdefghijklmnopqrstwxyz0123456789".toCharArray();
 	

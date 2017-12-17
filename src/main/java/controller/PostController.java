@@ -28,13 +28,13 @@ public class PostController {
 	}
 
 	public List<Post> obtain(User user){
-		TypedQuery<Post> q = entityManager.createQuery("Select p from Post p where p.user = :user",Post.class);
+		TypedQuery<Post> q = entityManager.createQuery("Select p from Post p where p.user = :user order by p.id desc",Post.class);
 		q.setParameter("user",user);
 		return q.getResultList();
 	}
 	
 	public List<Post> obtainAll(){
-		TypedQuery<Post> q = entityManager.createQuery("Select p from Post p",Post.class);
+		TypedQuery<Post> q = entityManager.createQuery("Select p from Post p order by p.id desc",Post.class);
 		return q.getResultList();
 	}
 

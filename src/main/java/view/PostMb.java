@@ -5,28 +5,41 @@ import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
 import javax.inject.Inject;
 import javax.inject.Named;
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.http.Part;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+import view.FollowerMb;
 import view.AuthMb;
 import controller.ImageController;
-import model.Image;
 import controller.PostController;
+import controller.LikeController;
+import model.Image;
 import model.Post;
 import model.User;
 
 @Named
+@MultipartConfig(location="/tmp",
+fileSizeThreshold=1024*1024, 
+maxFileSize=1024*1024*5,
+maxRequestSize=1024*1024*5*5)
 public class PostMb {
 	
 	@Inject
-	private PostController postCntr;
+	private PostController postCtrl;
 	
 	@Inject
 	private AuthMb authMb;
 
 	@Inject 
-	private ImageController imgCntr;
+	private ImageController imgCtrl;
+	
+	@Inject
+	private FollowerMb follower;
+
+	@Inject
+	private LikeController likeCtrl;
 	
 	private Part file;
 	
@@ -38,23 +51,24 @@ public class PostMb {
 	private String content;
 	
 	public void generate(){
-		try{
+		try {
 			Image img = null;
-			if(file != null && file.getSize() > 0 && file.getContentType().startsWith("image/")){
-				img = imgCntr.upload(file);
+			if (file != null && file.getSize() > 0 && file.getContentType().startsWith("image/")) {
+				img = imgCtrl.upload(file);
 			}
-			postCntr.generate(authMb.getCurrentUser(), content,img);
+			postCtrl.generate(authMb.getCurrentUser(), content, img);
 			content = null;
-		} catch (Exception e){
+		} catch (Exception e) {
 			e.printStackTrace();
-			FacesMessage msg = new FacesMessage(FacesMessage.SEVERITY_ERROR,"Error interno", null);
+			FacesMessage msg = new FacesMessage(FacesMessage.SEVERITY_ERROR, "No se a podido postear el contenido",
+					null);
 			FacesContext.getCurrentInstance().addMessage(null, msg);
 		}
 	}
 	
 	public List<Post> obtain(){
 		try{
-			return postCntr.obtain(currentUser);
+			return postCtrl.obtain(currentUser);
 		} catch (Exception e){
 			e.printStackTrace();
 			FacesMessage msg = new FacesMessage(FacesMessage.SEVERITY_ERROR,"Error interno", null);
@@ -66,7 +80,7 @@ public class PostMb {
 	
 	public List<Post> obtainAll(){
 		try{
-			return postCntr.obtainAll();
+			return postCtrl.obtainAll();
 		} catch (Exception e){
 			e.printStackTrace();
 			FacesMessage msg = new FacesMessage(FacesMessage.SEVERITY_ERROR,"Error interno", null);
@@ -75,13 +89,33 @@ public class PostMb {
 		}
 		
 	}
+	
+	public void like(Post p) {
+		likeCtrl.like(authMb.getCurrentUser(), p);
+
+	}
+	
+	public String amount(Post p) {
+		return likeCtrl.amount(p) + "";
+	}
+	
+	public List<Post> followPostList() {
+		try {
+			return postCtrl.obtain(follower.getUser());
+		} catch (Exception e) {
+			e.printStackTrace();
+			FacesMessage msg = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Error interno", null);
+			FacesContext.getCurrentInstance().addMessage(null, msg);
+			return null;
+		}
+	}
 
 	public PostController getPostCntr() {
-		return postCntr;
+		return postCtrl;
 	}
 
 	public void setPostCntr(PostController postCntr) {
-		this.postCntr = postCntr;
+		this.postCtrl = postCntr;
 	}
 
 	public User getCurrentUser() {

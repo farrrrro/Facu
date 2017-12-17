@@ -4,7 +4,7 @@ import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
-
+import model.Follower;
 import model.User;
 
 @Stateless
@@ -55,5 +55,18 @@ public class UserController {
 	
 	public void update(User user){
 		entityManager.merge(user);
+	}
+	
+	public User follow(User me, String follower) {
+		String jpql = "Select u from User u where u.name = :username ";
+		TypedQuery<User> q = entityManager.createQuery(jpql, User.class);
+		q.setParameter("username", follower);
+		if (q.getSingleResult().getUsername().equals(follower)) {
+			Follower f = new Follower();
+			f.setMe(me);
+			f.setOtherUser(q.getSingleResult());
+			entityManager.persist(f);
+		}
+		return q.getSingleResult();
 	}
 }

@@ -17,7 +17,7 @@ import model.User;
 public class CommentMb {
 
 	@Inject
-	private CommentController commentCntrl;
+	private CommentController commentCtrl;
 	
 	@Inject
 	private AuthMb authMb;
@@ -28,11 +28,11 @@ public class CommentMb {
 	
 	public void create(Post post){
 		User user = authMb.getCurrentUser();
-		commentCntrl.create(user, post, comment);
+		commentCtrl.create(user, post, comment);
 	}
 
 	public List<Comment> listByPost(Post post){
-		return commentCntrl.byPost(post);
+		return commentCtrl.byPost(post);
 	}
 
 	public String getComment() {
