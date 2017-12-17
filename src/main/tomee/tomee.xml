@@ -2,7 +2,7 @@
 <tomee>
 	<Resource id="MysqlDs" type="DataSource">
 	    JdbcDriver  com.mysql.jdbc.Driver
-	    JdbcUrl jdbc:mysql://localhost:3306/test23
+	    JdbcUrl jdbc:mysql://localhost/test23
 	    UserName    user23
 	    Password    pass23
 	</Resource>

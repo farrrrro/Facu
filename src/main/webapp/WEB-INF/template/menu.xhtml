@@ -16,6 +16,8 @@
 							outcome="register" rendered="#{not authMb.logged}" />
 						<h:link value="Mi perfil" styleClass="btn btn-info"
 							outcome="myProfile" rendered="#{authMb.logged}" />
+						<h:link value="Seguidores" styleClass="btn btn-info"
+							outcome="follow" rendered="#{authMb.logged}" />
 						<h:commandLink value="Salir" styleClass="btn btn-danger"
 							action="#{authMb.logout()}" rendered="#{authMb.logged}" />
 					</nav>
