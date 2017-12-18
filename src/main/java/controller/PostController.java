@@ -23,7 +23,8 @@ public class PostController {
 		p.setDateTime(new Date());
 		p.setContent(content);
 		p.setUser(user);
-		p.setImage(img);
+		p.setImage(img)
+		p.setLikes(0);
 		entityManager.persist(p);
 	}
 
