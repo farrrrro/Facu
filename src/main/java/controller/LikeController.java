@@ -27,7 +27,11 @@ public class LikeController {
 		} else {
 			entityManager.remove(q.getSingleResult());
 			entityManager.persist(l);
+			String hql = "UPDATE Post SET likes=likes - 1 WHERE post=?1";
 		}
+		int executeUpdate = entityManager.createQuery(hql).setParameter(1, post).executeUpdate();
+		entityManager.getTransaction().commit();
+		entityManager.close();
 	}
 	
 	public int amount(Post post) {
