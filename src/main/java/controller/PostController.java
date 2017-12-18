@@ -24,6 +24,7 @@ public class PostController {
 		p.setContent(content);
 		p.setUser(user);
 		p.setImage(img);
+		p.likes = 0;
 		entityManager.persist(p);
 	}
 
