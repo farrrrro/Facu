@@ -34,6 +34,9 @@ public class Post {
     @Size(min=2,max=255)
 	private String content;
 	
+    @Size(min=2, max=255)
+	private int likes;
+	
     @ManyToOne
     private Image image;
     
@@ -67,6 +70,13 @@ public class Post {
 	public void setContent(String content) {
 		this.content = content;
 	}
+	public int getLikes(){
+		return likes;
+	}
+	public void setLikes(int likes){
+		this.likes = likes;
+	}
+
 	public Image getImage() {
 		return image;
 	}
