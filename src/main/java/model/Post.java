@@ -35,7 +35,11 @@ public class Post {
 	private String content;
 	
     @ManyToOne
-    private Image image;
+    	private Image image;
+	
+    @Size(min=2,max=255)
+	private int likes;
+	
     
     @Override
 	public String toString() {
@@ -73,6 +77,14 @@ public class Post {
 
 	public void setImage(Image image) {
 		this.image = image;
+	}
+	
+	public Image getLikes() {
+		return likes;
+	}
+
+	public void setLikes(int likes) {
+		this.likes = likes;
 	}
 	
 	
